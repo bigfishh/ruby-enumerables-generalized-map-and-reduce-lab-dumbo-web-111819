@@ -18,7 +18,7 @@ def reduce(source_array, sv = nil)
   end 
   
   while index < source_array.length do 
-    sum = yield(num1, source_array[index])
+    sum = yield(sum, source_array[index])
     index += 1 
   end 
   sum
