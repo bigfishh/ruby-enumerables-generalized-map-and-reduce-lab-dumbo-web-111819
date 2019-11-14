@@ -9,6 +9,21 @@ def map(source_array)
 end
 
 def reduce(source_array, sv = nil)
+  if sv 
+    sum = sv 
+    index = 0 
+  else 
+    sum = source_array[0]
+    index = 1 
+  end 
   
-  
+  while index < source_array.length do 
+    sum = yield(num1, source_array[index])
+    index += 1 
+  end 
+  sum
 end
+
+
+
+
